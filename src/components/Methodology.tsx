@@ -34,10 +34,7 @@ const Methodology = () => {
       <div className="container max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our Proven{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
-              4-Phase Approach
-            </span>
+            Our Proven <span className="text-primary">4-Phase Approach</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Every engagement follows our systematic methodology, ensuring practical implementation and measurable results.

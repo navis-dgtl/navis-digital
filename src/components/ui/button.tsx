@@ -9,12 +9,12 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "text-white transform hover:scale-105 duration-300",
+        default: "bg-primary/10 border border-primary/50 text-foreground hover:bg-primary/20 hover:border-primary hover:scale-105 duration-300",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90 transform hover:scale-105 duration-300",
-        outline: "text-white transform hover:scale-105 duration-300",
-        secondary: "text-white transform hover:scale-105 duration-300",
-        ghost: "hover:bg-accent/10 hover:text-accent-foreground transform hover:scale-105 duration-300",
+        outline: "border border-border text-foreground hover:bg-primary/5 hover:border-primary/50 hover:scale-105 duration-300",
+        secondary: "bg-secondary border border-border text-secondary-foreground hover:bg-primary/5 hover:border-primary/50 hover:scale-105 duration-300",
+        ghost: "hover:bg-primary/10 hover:text-foreground transform hover:scale-105 duration-300",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
@@ -38,64 +38,13 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, disabled, ...props }, ref) => {
-    const [isHovered, setIsHovered] = React.useState(false);
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-
-    // Primary button with gradient border (cyan to purple)
-    const defaultStyle = disabled
-      ? {
-          background: "#1D1D1D",
-          border: "1px solid rgba(162, 80, 255, 0.2)",
-        }
-      : {
-          background: "#1D1D1D",
-          border: "1px solid transparent",
-          backgroundImage: "linear-gradient(#1D1D1D, #1D1D1D), linear-gradient(135deg, #99E9F2, #A250FF)",
-          backgroundOrigin: "border-box",
-          backgroundClip: "padding-box, border-box",
-          boxShadow: isHovered
-            ? "0 0 40px rgba(162, 80, 255, 0.4), 0 0 80px rgba(153, 233, 242, 0.2)"
-            : "0 2px 10px rgba(162, 80, 255, 0.15)",
-        };
-
-    // Secondary/Outline button (white border, simple)
-    const secondaryStyle = disabled
-      ? {
-          background: "#1D1D1D",
-          border: "1px solid rgba(255, 255, 255, 0.1)",
-        }
-      : {
-          background: "#1D1D1D",
-          border: "1px solid rgba(255, 255, 255, 0.2)",
-          boxShadow: isHovered ? "0 0 25px rgba(255, 255, 255, 0.15)" : "0 2px 8px rgba(0, 0, 0, 0.3)",
-        };
-
-    const getButtonStyle = () => {
-      // Ghost and link variants use no custom styles
-      if (variant === "ghost" || variant === "link") {
-        return {};
-      }
-      // Destructive uses Tailwind classes
-      if (variant === "destructive") {
-        return {};
-      }
-      // Outline and secondary use white border
-      if (variant === "outline" || variant === "secondary") {
-        return secondaryStyle;
-      }
-      // Default to primary gradient button
-      return defaultStyle;
-    };
 
     return (
       <Comp
         className={cn(buttonVariants({ variant, size }), className)}
         ref={ref}
-        style={getButtonStyle()}
-        onMouseEnter={() => !disabled && setIsHovered(true)}
-        onMouseLeave={() => !disabled && setIsHovered(false)}
-        disabled={disabled}
         {...props}
       />
     );
