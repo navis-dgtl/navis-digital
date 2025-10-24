@@ -13,8 +13,8 @@ const caseStudies = [
   {
     icon: Users,
     category: "Non-Profit Success",
-    title: "Faith-Based Organization Efficiency",
-    description: "Implemented AI solutions for a religious non-profit to streamline volunteer coordination and communication, enhancing mission impact.",
+    title: "Non-Profit Organization Efficiency",
+    description: "Implemented and trained on various AI for a non-profit to streamline volunteer coordination and communication, enhancing mission impact.",
     results: ["40% administrative time saved", "2x volunteer engagement", "Mission-aligned implementation"],
     industry: "Non-Profit"
   },
@@ -22,7 +22,7 @@ const caseStudies = [
     icon: Zap,
     category: "Training & Adoption",
     title: "Enterprise-Wide AI Adoption Program",
-    description: "Delivered comprehensive training program for 50+ employees, establishing internal AI capabilities and best practices.",
+    description: "Developed and delivered tailored and comprehensive AI training program for 1,200+ employees, establishing internal AI capabilities and best practices.",
     results: ["85% employee confidence", "Custom prompt library created", "Ongoing adoption support"],
     industry: "Technology Services"
   }
