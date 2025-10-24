@@ -48,15 +48,6 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Trust indicators - keep simple */}
-        <div className="mt-20 pt-12 border-t border-border/50">
-          <p className="text-sm text-muted-foreground mb-6">Trusted by organizations seeking practical AI solutions</p>
-          <div className="flex flex-wrap justify-center gap-8 items-center opacity-50">
-            <div className="text-2xl font-bold text-muted-foreground">Faith-Based Orgs</div>
-            <div className="text-2xl font-bold text-muted-foreground">Non-Profits</div>
-            <div className="text-2xl font-bold text-muted-foreground">Enterprises</div>
-          </div>
-        </div>
       </div>
     </section>
   );
