@@ -1,4 +1,4 @@
-import logo from "@/assets/navis-new-logo.png";
+import logo from "@/assets/navis-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
