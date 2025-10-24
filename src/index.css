@@ -2,67 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Navis Design System - Updated to match button color palette
+   Primary: Cyan (#99E9F2) - HSL: 187 75% 76%
+   Accent: Purple (#A250FF) - HSL: 272 100% 65%
+   Background: Dark (#1D1D1D) - HSL: 0 0% 11.4%
 */
 
 @layer base {
   :root {
-    --background: 0 0% 11%;
+    /* Base colors - updated to match #1D1D1D background */
+    --background: 0 0% 11.4%;
     --foreground: 0 0% 100%;
 
+    /* Card colors - slightly lighter than background */
     --card: 0 0% 14%;
     --card-foreground: 0 0% 100%;
 
+    /* Popover inherits card colors */
     --popover: 0 0% 14%;
     --popover-foreground: 0 0% 100%;
 
+    /* Primary: Cyan from button gradient (#99E9F2) */
     --primary: 187 75% 76%;
     --primary-foreground: 0 0% 11%;
 
-    --secondary: 0 0% 11%;
+    /* Secondary matches background */
+    --secondary: 0 0% 14%;
     --secondary-foreground: 0 0% 100%;
 
+    /* Muted states */
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 65%;
 
+    /* Accent: Purple from button gradient (#A250FF) */
     --accent: 272 100% 65%;
     --accent-foreground: 0 0% 100%;
 
+    /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
+    /* Borders and inputs - subtle */
     --border: 0 0% 20%;
     --input: 0 0% 20%;
+
+    /* Ring uses cyan */
     --ring: 187 75% 76%;
 
+    /* Border radius */
     --radius: 0.75rem;
-    
+
+    /* Custom gradients matching button design */
     --gradient-primary: linear-gradient(135deg, hsl(187 75% 76%) 0%, hsl(272 100% 65%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 11%) 0%, hsl(0 0% 14%) 100%);
-    --glow-primary: 0 0 40px hsl(187 75% 76% / 0.4);
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 11.4%) 0%, hsl(0 0% 14%) 100%);
+
+    /* Glow effects matching button hover states */
+    --glow-primary: 0 0 40px hsl(272 100% 65% / 0.4), 0 0 80px hsl(187 75% 76% / 0.2);
     --glow-accent: 0 0 60px hsl(272 100% 65% / 0.4);
+    --glow-cyan: 0 0 60px hsl(187 75% 76% / 0.3);
+
+    /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
+    /* Sidebar - maintaining existing values */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 0 0% 11%;
+    --background: 0 0% 11.4%;
     --foreground: 0 0% 100%;
 
     --card: 0 0% 14%;
@@ -74,7 +88,7 @@ All colors MUST be HSL.
     --primary: 187 75% 76%;
     --primary-foreground: 0 0% 11%;
 
-    --secondary: 0 0% 11%;
+    --secondary: 0 0% 14%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 20%;
@@ -89,6 +103,7 @@ All colors MUST be HSL.
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 187 75% 76%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
