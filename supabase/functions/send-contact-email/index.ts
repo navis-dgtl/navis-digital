@@ -25,10 +25,10 @@ const handler = async (req: Request): Promise<Response> => {
 
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
     
-    // Send notification email to Navis
+    // Send notification email to Navis (using verified email until domain is verified)
     const emailData = {
-      from: "Navis Contact Form <onboarding@resend.dev>",
-      to: ["hello@navis.digital"],
+      from: "onboarding@resend.dev",
+      to: ["navis.dgtl@gmail.com"],
       reply_to: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
@@ -38,6 +38,8 @@ const handler = async (req: Request): Promise<Response> => {
         ${organization ? `<p><strong>Organization:</strong> ${organization}</p>` : ''}
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
+        <p style="color: #666; font-size: 12px;">Reply directly to this email to respond to ${email}</p>
       `,
     };
 
@@ -59,30 +61,9 @@ const handler = async (req: Request): Promise<Response> => {
     const data = await res.json();
     console.log("Email sent successfully:", data);
 
-    // Send confirmation email to user
-    const confirmationData = {
-      from: "Navis <onboarding@resend.dev>",
-      to: [email],
-      subject: "Thank you for contacting Navis",
-      html: `
-        <h1>Thank you for reaching out, ${name}!</h1>
-        <p>We have received your message and will get back to you as soon as possible.</p>
-        <p>Here's a copy of your message:</p>
-        <blockquote style="border-left: 4px solid #99E9F2; padding-left: 16px; margin: 16px 0;">
-          ${message.replace(/\n/g, '<br>')}
-        </blockquote>
-        <p>Best regards,<br>The Navis Team</p>
-      `,
-    };
-
-    await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
-      },
-      body: JSON.stringify(confirmationData),
-    });
+    // Note: Confirmation emails to users are disabled until domain is verified in Resend
+    // Once you verify your domain at resend.com/domains, you can uncomment this section
+    // and update the 'from' address to use your verified domain (e.g., contact@navis.digital)
 
     return new Response(JSON.stringify({ success: true, data }), {
       status: 200,
