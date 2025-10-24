@@ -75,7 +75,7 @@ const Services = () => {
                 </ul>
                 
                 <Button 
-                  className="w-full"
+                  className="w-full hover:scale-100"
                   onClick={scrollToContact}
                 >
                   Learn More
