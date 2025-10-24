@@ -20,14 +20,14 @@ const Hero = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[120px] animate-glow" style={{ animationDelay: "1.5s" }} />
 
       <div className="container relative z-10 max-w-5xl mx-auto text-center animate-fade-in-up">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-primary/20 mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-primary/20 mb-8 animate-border-dance">
           <Sparkles className="h-4 w-4 text-primary" />
           <span className="text-sm text-muted-foreground">AI Implementation & Strategy Consultancy</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Transform AI Potential Into{" "}
-          <span className="bg-gradient-primary bg-clip-text text-transparent">
+          <span className="bg-gradient-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
             Measurable Results
           </span>
         </h1>
@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
             size="lg" 
-            className="bg-gradient-primary hover:shadow-[var(--glow-primary)] transition-shadow text-lg px-8 py-6"
+            className="bg-gradient-primary hover:shadow-[var(--glow-primary)] transition-all hover:scale-105 text-lg px-8 py-6"
             onClick={scrollToContact}
           >
             Get Started <ArrowRight className="ml-2 h-5 w-5" />
@@ -48,7 +48,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="text-lg px-8 py-6 border-primary/30 hover:bg-primary/10"
+            className="text-lg px-8 py-6 border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all hover:scale-105"
             onClick={scrollToServices}
           >
             Explore Services

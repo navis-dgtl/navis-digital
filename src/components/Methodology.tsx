@@ -35,7 +35,7 @@ const Methodology = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Our Proven{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="bg-gradient-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
               4-Phase Approach
             </span>
           </h2>
@@ -50,7 +50,7 @@ const Methodology = () => {
             return (
               <Card 
                 key={index} 
-                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 relative overflow-hidden group animate-fade-in"
+                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 relative overflow-hidden group hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="absolute top-0 right-0 text-8xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors">

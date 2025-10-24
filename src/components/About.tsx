@@ -11,7 +11,7 @@ const About = () => {
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Bridging AI Capabilities With{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
+              <span className="bg-gradient-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                 Business Needs
               </span>
             </h2>
@@ -27,7 +27,7 @@ const About = () => {
           </div>
 
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all">
+            <Card className="p-6 bg-card border-border hover:border-primary/50 hover:scale-105 transition-all">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Target className="h-6 w-6 text-primary" />
@@ -42,7 +42,7 @@ const About = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all">
+            <Card className="p-6 bg-card border-border hover:border-primary/50 hover:scale-105 transition-all">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Award className="h-6 w-6 text-primary" />
@@ -57,7 +57,7 @@ const About = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all">
+            <Card className="p-6 bg-card border-border hover:border-primary/50 hover:scale-105 transition-all">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Users className="h-6 w-6 text-primary" />
