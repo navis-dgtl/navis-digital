@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 220 18% 12%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 220 20% 8%;
+    --primary: 238 93% 74%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 18%;
+    --secondary: 0 0% 9%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 220 15% 18%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 265 80% 65%;
+    --accent: 272 100% 65%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
@@ -38,10 +38,13 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(265 80% 65%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(187 75% 76%) 0%, hsl(207 89% 68%) 30%, hsl(272 100% 65%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(220 20% 8%) 0%, hsl(220 25% 12%) 100%);
-    --glow-primary: 0 0 40px hsl(217 91% 60% / 0.3);
-    --glow-accent: 0 0 60px hsl(265 80% 65% / 0.25);
+    --gradient-button-fill: radial-gradient(circle at top, hsl(238 93% 74%) 0%, hsl(0 0% 9%) 100%);
+    --gradient-button-border: linear-gradient(90deg, hsl(187 75% 76%) 1%, hsl(207 89% 68%) 11%, hsl(272 100% 65%) 80%, hsl(203 48% 11%) 94%, hsl(272 100% 65%) 100%);
+    --glow-primary: 0 0 40px hsl(238 93% 74% / 0.4);
+    --glow-accent: 0 0 60px hsl(272 100% 65% / 0.3);
+    --glow-button: 0 0 20px hsl(207 89% 68% / 0.6);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -71,16 +74,16 @@ All colors MUST be HSL.
     --popover: 220 18% 12%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 220 20% 8%;
+    --primary: 238 93% 74%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 18%;
+    --secondary: 0 0% 9%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 220 15% 18%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 265 80% 65%;
+    --accent: 272 100% 65%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;

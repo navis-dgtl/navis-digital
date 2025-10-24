@@ -89,16 +89,16 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
         "glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(217 91% 60% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(217 91% 60% / 0.6)" }
+          "0%, 100%": { boxShadow: "0 0 20px hsl(238 93% 74% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(238 93% 74% / 0.6)" }
         },
         "gradient-shift": {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" }
         },
         "border-dance": {
-          "0%, 100%": { borderColor: "hsl(217 91% 60% / 0.3)" },
-          "50%": { borderColor: "hsl(265 80% 65% / 0.5)" }
+          "0%, 100%": { borderColor: "hsl(207 89% 68% / 0.3)" },
+          "50%": { borderColor: "hsl(272 100% 65% / 0.5)" }
         }
       },
       animation: {
@@ -112,7 +112,9 @@ export default {
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
-        "gradient-hero": "var(--gradient-hero)"
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-button-fill": "var(--gradient-button-fill)",
+        "gradient-button-border": "var(--gradient-button-border)"
       },
     },
   },

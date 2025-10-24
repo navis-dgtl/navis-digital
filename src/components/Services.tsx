@@ -86,7 +86,7 @@ const Services = () => {
 
         <div className="text-center">
           <p className="text-muted-foreground mb-4">Need something custom?</p>
-          <Button variant="outline" size="lg" className="border-primary/30" onClick={scrollToContact}>
+          <Button variant="outline" size="lg" onClick={scrollToContact}>
             Discuss Your Needs
           </Button>
         </div>

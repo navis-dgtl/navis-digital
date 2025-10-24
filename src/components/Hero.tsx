@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
             size="lg" 
-            className="bg-gradient-primary hover:shadow-[var(--glow-primary)] transition-all hover:scale-105 text-lg px-8 py-6"
+            className="text-lg px-8 py-6"
             onClick={scrollToContact}
           >
             Get Started <ArrowRight className="ml-2 h-5 w-5" />
@@ -48,7 +48,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="text-lg px-8 py-6 border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all hover:scale-105"
+            className="text-lg px-8 py-6"
             onClick={scrollToServices}
           >
             Explore Services
