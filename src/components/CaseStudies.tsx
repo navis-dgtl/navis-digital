@@ -34,10 +34,7 @@ const CaseStudies = () => {
       <div className="container max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Real Impact,{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Real Results
-            </span>
+            Real Impact, <span className="text-primary">Real Results</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             See how organizations transform their operations with our AI implementation expertise.
@@ -50,12 +47,14 @@ const CaseStudies = () => {
             return (
               <Card 
                 key={index} 
-                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow-primary animate-fade-in"
+                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 animate-fade-in group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="mb-4 p-3 bg-accent/10 rounded-lg w-fit">
-                  <Icon className="h-6 w-6 text-accent" />
+                {/* Icon - cyan only */}
+                <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit group-hover:bg-primary/15 transition-colors">
+                  <Icon className="h-6 w-6 text-primary" />
                 </div>
+                
                 <div className="text-sm text-primary mb-2">{study.category}</div>
                 <h3 className="text-xl font-bold mb-3">{study.title}</h3>
                 <p className="text-muted-foreground mb-4">{study.description}</p>

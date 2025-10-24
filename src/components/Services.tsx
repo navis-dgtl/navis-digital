@@ -41,10 +41,7 @@ const Services = () => {
       <div className="container relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Services Designed For{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
-              Real Results
-            </span>
+            Services Designed For <span className="text-primary">Real Results</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             From prompt engineering to full AI transformation, we meet you where you are and guide you forward.
@@ -57,14 +54,17 @@ const Services = () => {
             return (
               <Card 
                 key={index} 
-                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 shadow-glow-primary hover:scale-105 animate-fade-in"
+                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 animate-fade-in group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit">
+                {/* Icon - matching methodology style */}
+                <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit group-hover:bg-primary/15 transition-colors">
                   <Icon className="h-6 w-6 text-primary" />
                 </div>
+                
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-muted-foreground mb-4">{service.description}</p>
+                
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, i) => (
                     <li key={i} className="text-sm text-muted-foreground flex items-center">
@@ -73,6 +73,7 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                
                 <Button 
                   className="w-full"
                   onClick={scrollToContact}

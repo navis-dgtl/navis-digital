@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MessageSquare, Send } from "lucide-react";
+import { Mail, MessageSquare, Send, Heart } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -27,10 +27,7 @@ const Contact = () => {
       <div className="container relative z-10 max-w-5xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Ready to{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Transform Your AI Strategy?
-            </span>
+            Ready to <span className="text-primary">Transform Your AI Strategy?</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Let's discuss how we can help your organization harness AI effectively.
@@ -92,9 +89,9 @@ const Contact = () => {
           </Card>
 
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <Card className="p-6 bg-card border-border">
+            <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 group">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
+                <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/15 transition-colors">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
@@ -109,9 +106,9 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-card border-border">
+            <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 group">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
+                <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/15 transition-colors">
                   <MessageSquare className="h-6 w-6 text-primary" />
                 </div>
                 <div>
@@ -126,12 +123,20 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-gradient-primary">
-              <h3 className="text-xl font-bold mb-2 text-primary-foreground">Non-Profit Discount</h3>
-              <p className="text-primary-foreground/90">
-                We offer special pricing for faith-based organizations and non-profits. 
-                Mention this in your message to learn more about our mission-aligned packages.
-              </p>
+            {/* Simplified non-profit card - no gradient background */}
+            <Card className="p-6 bg-card border-primary/30 hover:border-primary/50 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <Heart className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Non-Profit Discount</h3>
+                  <p className="text-muted-foreground">
+                    We offer special pricing for faith-based organizations and non-profits. 
+                    Mention this in your message to learn more about our mission-aligned packages.
+                  </p>
+                </div>
+              </div>
             </Card>
           </div>
         </div>
