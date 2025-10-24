@@ -11,8 +11,8 @@ const buttonVariants = cva(
       variant: {
         default: "text-white",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 hover:scale-105",
-        outline: "text-white",
-        secondary: "text-white",
+        outline: "text-white hover:scale-105",
+        secondary: "text-white hover:scale-105",
         ghost: "hover:bg-accent hover:text-accent-foreground hover:scale-105",
         link: "text-primary underline-offset-4 hover:underline",
       },
@@ -74,7 +74,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     
     return (
       <Comp 
-        className={cn(buttonVariants({ variant, size, className }), "transform hover:scale-105 duration-300")} 
+        className={cn(buttonVariants({ variant, size, className }), "duration-300")} 
         ref={ref} 
         style={getButtonStyle()}
         onMouseEnter={() => setIsHovered(true)}
