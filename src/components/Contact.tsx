@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageSquare, Send, Heart } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,11 +14,27 @@ const Contact = () => {
     organization: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for your interest! We'll be in touch soon.");
-    setFormData({ name: "", email: "", organization: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) throw error;
+
+      toast.success("Thank you for your interest! We'll be in touch soon.");
+      setFormData({ name: "", email: "", organization: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error("Failed to send message. Please try again or email us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -82,8 +99,8 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" className="w-full" size="lg">
-                Send Message <Send className="ml-2 h-4 w-4" />
+              <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"} <Send className="ml-2 h-4 w-4" />
               </Button>
             </form>
           </Card>
