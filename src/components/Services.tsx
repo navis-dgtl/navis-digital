@@ -57,7 +57,7 @@ const Services = () => {
             return (
               <Card 
                 key={index} 
-                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-[var(--glow-primary)] hover:scale-105 animate-fade-in"
+                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 shadow-glow-primary hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit">

@@ -50,7 +50,7 @@ const CaseStudies = () => {
             return (
               <Card 
                 key={index} 
-                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-[var(--glow-primary)] animate-fade-in"
+                className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow-primary animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="mb-4 p-3 bg-accent/10 rounded-lg w-fit">

@@ -85,7 +85,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-gradient-primary" size="lg">
+              <Button type="submit" className="w-full" size="lg">
                 Send Message <Send className="ml-2 h-4 w-4" />
               </Button>
             </form>
@@ -119,7 +119,7 @@ const Contact = () => {
                   <p className="text-muted-foreground mb-2">
                     Book a free 30-minute discovery call to discuss your AI needs.
                   </p>
-                  <Button variant="outline" className="mt-2 border-primary/30">
+                  <Button variant="outline" className="mt-2">
                     Book Consultation
                   </Button>
                 </div>

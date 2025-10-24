@@ -34,7 +34,7 @@ const Navigation = () => {
             <button onClick={() => scrollToSection("contact")} className="text-foreground hover:text-primary transition-colors">
               Contact
             </button>
-            <Button onClick={() => scrollToSection("contact")} className="bg-gradient-primary">
+            <Button onClick={() => scrollToSection("contact")}>
               Get Started
             </Button>
           </div>
@@ -60,7 +60,7 @@ const Navigation = () => {
             <button onClick={() => scrollToSection("contact")} className="block text-foreground hover:text-primary transition-colors">
               Contact
             </button>
-            <Button onClick={() => scrollToSection("contact")} className="w-full bg-gradient-primary">
+            <Button onClick={() => scrollToSection("contact")} className="w-full">
               Get Started
             </Button>
           </div>
