@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import worldMap from "@/assets/world-map.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -14,6 +15,12 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20 px-6">
       {/* Simple dark background - NO glowing orbs */}
       <div className="absolute inset-0 bg-gradient-hero" />
+      
+      {/* Subtle world map background */}
+      <div 
+        className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-[0.08]"
+        style={{ backgroundImage: `url(${worldMap})` }}
+      />
 
       <div className="container relative z-10 max-w-5xl mx-auto text-center animate-fade-in-up">
         {/* Simple badge - no sparkles, subtle border */}
