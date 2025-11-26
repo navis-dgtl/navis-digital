@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
+import PortfolioNav from "@/components/PortfolioNav";
+import emojiAvatar from "@/assets/emoji-avatar.png";
 import {
   Mail,
   Phone,
@@ -23,9 +25,16 @@ import {
 const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PortfolioNav />
+      
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center pt-20 px-6">
+      <section id="hero" className="relative min-h-[70vh] flex items-center justify-center pt-20 px-6 pb-32">
         <div className="absolute inset-0 bg-gradient-hero" />
+        
+        {/* Emoji Avatar - positioned subtly in the background */}
+        <div className="absolute right-[5%] top-[20%] w-48 h-48 md:w-64 md:h-64 opacity-10 pointer-events-none">
+          <img src={emojiAvatar} alt="" className="w-full h-full object-contain" />
+        </div>
 
         <div className="container relative z-10 max-w-4xl mx-auto text-center animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-primary/20 mb-6">
@@ -62,13 +71,13 @@ const Portfolio = () => {
       </section>
 
       {/* Key Metrics Section */}
-      <section className="py-20 px-6 bg-card/30">
+      <section id="numbers" className="py-20 px-6 bg-card/30">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             By the Numbers
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {[
               { number: "2,000+", label: "Individuals trained on AI" },
               { number: "1,000+", label: "Staff members using AI tools I deployed" },
@@ -77,11 +86,11 @@ const Portfolio = () => {
               { number: "$450K+", label: "Annual AI budget managed" },
               { number: "2", label: "AI companies founded" }
             ].map((metric, index) => (
-              <Card key={index} className="p-6 text-center border-primary/20 bg-card/50">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+              <Card key={index} className="p-8 flex flex-col items-center justify-center text-center border-primary/20 bg-card/50 min-h-[180px]">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-3">
                   {metric.number}
                 </div>
-                <div className="text-sm md:text-base text-muted-foreground">
+                <div className="text-sm md:text-base text-muted-foreground leading-snug">
                   {metric.label}
                 </div>
               </Card>
@@ -91,7 +100,7 @@ const Portfolio = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 px-6">
+      <section id="about" className="py-20 px-6">
         <div className="container max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
 
@@ -114,7 +123,7 @@ const Portfolio = () => {
       <Separator className="max-w-6xl mx-auto" />
 
       {/* What I Do Section */}
-      <section className="py-20 px-6">
+      <section id="what-i-do" className="py-20 px-6">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             What I Do
@@ -158,7 +167,7 @@ const Portfolio = () => {
       <Separator className="max-w-6xl mx-auto" />
 
       {/* Featured Projects Section */}
-      <section className="py-20 px-6 bg-card/30">
+      <section id="projects" className="py-20 px-6 bg-card/30">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Featured Projects
@@ -353,7 +362,7 @@ const Portfolio = () => {
       <Separator className="max-w-6xl mx-auto" />
 
       {/* Experience Section */}
-      <section className="py-20 px-6">
+      <section id="experience" className="py-20 px-6">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Work Experience
@@ -436,7 +445,7 @@ const Portfolio = () => {
       <Separator className="max-w-6xl mx-auto" />
 
       {/* Education & Certifications */}
-      <section className="py-20 px-6 bg-card/30">
+      <section id="education" className="py-20 px-6 bg-card/30">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Education & Certifications
@@ -501,7 +510,7 @@ const Portfolio = () => {
       <Separator className="max-w-6xl mx-auto" />
 
       {/* Technical Skills */}
-      <section className="py-20 px-6">
+      <section id="skills" className="py-20 px-6">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Technical Skills
@@ -622,7 +631,7 @@ const Portfolio = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 px-6">
+      <section id="connect" className="py-20 px-6">
         <div className="container max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Let's talk about how I can help your organization get real value from AI
