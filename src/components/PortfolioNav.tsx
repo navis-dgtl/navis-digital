@@ -49,7 +49,7 @@ const PortfolioNav = () => {
   };
 
   return (
-    <nav className="sticky top-16 z-40 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide py-3">
           {sections.map((section) => (

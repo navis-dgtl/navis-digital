@@ -30,13 +30,15 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section id="hero" className="relative min-h-[70vh] flex items-center justify-center pt-20 px-6 pb-32">
         <div className="absolute inset-0 bg-gradient-hero" />
-        
-        {/* Emoji Avatar - positioned subtly in the background */}
-        <div className="absolute right-[5%] top-[20%] w-48 h-48 md:w-64 md:h-64 opacity-10 pointer-events-none">
-          <img src={emojiAvatar} alt="" className="w-full h-full object-contain" />
-        </div>
 
         <div className="container relative z-10 max-w-4xl mx-auto text-center animate-fade-in-up">
+          {/* Emoji Avatar - small circular image above badge */}
+          <div className="flex justify-center mb-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30">
+              <img src={emojiAvatar} alt="Nick Prince" className="w-full h-full object-cover" />
+            </div>
+          </div>
+          
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-primary/20 mb-6">
             <span className="text-sm text-muted-foreground">AI Solutions Manager | Enterprise Implementation</span>
           </div>
