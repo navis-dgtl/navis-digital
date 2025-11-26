@@ -18,7 +18,7 @@ const Hero = () => {
       
       {/* Subtle world map background */}
       <div 
-        className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-[0.08]"
+        className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-[0.25]"
         style={{ backgroundImage: `url(${worldMap})` }}
       />
 
