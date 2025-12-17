@@ -40,15 +40,15 @@ const Portfolio = () => {
           </div>
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-primary/20 mb-6">
-            <span className="text-sm text-muted-foreground">AI Solutions Manager | Enterprise Implementation</span>
+            <span className="text-sm text-muted-foreground">AI Solutions Architect | Enterprise Implementation</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-foreground">
-            I've trained <span className="text-primary">2,000+</span> people to actually use AI
+            I've trained <span className="text-primary">9,000+</span> people to actually use AI
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            AI Solutions Manager | Enterprise Implementation | ML Systems | Change Management
+            AI Solutions Architect | Enterprise Implementation | ML Systems | Change Management
           </p>
 
           <p className="text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto">
@@ -79,11 +79,13 @@ const Portfolio = () => {
             By the Numbers
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { number: "2,000+", label: "Individuals trained on AI" },
+              { number: "9,000+", label: "Staff trained on AI" },
               { number: "1,000+", label: "Staff members using AI tools I deployed" },
               { number: "85%", label: "Adoption rate in first quarter" },
+              { number: "200+", label: "Hours saved monthly through automation" },
+              { number: "71+", label: "Training resources published" },
               { number: "11.3M", label: "Total social media following" },
               { number: "$450K+", label: "Annual AI budget managed" },
               { number: "2", label: "AI companies founded" }
@@ -108,7 +110,7 @@ const Portfolio = () => {
 
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              I lead enterprise AI transformation at <span className="text-foreground font-semibold">Life.Church</span>, where I've implemented Claude, Copilot, Cursor, and custom AI systems across 1,000+ staff members. In my first quarter, I achieved 85% adoption through the AI Resource & Learning Hub I designed and launched. I've personally trained over 2,000 individuals—from complete AI beginners to teams with deeply integrated workflows—through one-on-ones, workshops, and keynote sessions.
+              I lead enterprise AI transformation at <span className="text-foreground font-semibold">Life.Church & YouVersion</span> as AI Solutions Architect, where I've implemented Claude Enterprise, Cursor, n8n, and custom AI solutions across 1,000+ staff members. In my first quarter, I achieved 85% adoption through the AI Resource & Learning Hub I designed and launched. I've personally trained over 9,000 staff members—from complete AI beginners to teams with deeply integrated workflows—and created 71+ training resources in just 6 months.
             </p>
 
             <p>
@@ -116,7 +118,7 @@ const Portfolio = () => {
             </p>
 
             <p>
-              My background combines technical depth (<span className="text-primary font-semibold">Harvard CS Master's</span>, full-stack development, ML frameworks) with proven ability to drive adoption at scale. I've also built social media properties reaching 11.3 million followers, with features in Huffington Post, BuzzFeed, ABC News, and The Ellen Show—demonstrating I understand how to make technology accessible and engaging.
+              My background combines technical depth (<span className="text-primary font-semibold">Harvard Computer Science & AI for Leaders program</span>, full-stack development, Python/JavaScript/Node.js/TypeScript) with proven ability to drive adoption at scale. I've also built social media properties reaching 11.3 million followers, with features in Huffington Post, BuzzFeed, ABC News, and The Ellen Show—demonstrating I understand how to make technology accessible and engaging.
             </p>
           </div>
         </div>
@@ -136,7 +138,7 @@ const Portfolio = () => {
               {
                 icon: <Cloud className="h-8 w-8" />,
                 title: "Enterprise AI Implementation",
-                description: "I've deployed Claude, Microsoft Copilot, Cursor, and custom AI systems across 1,000+ employees. This includes full-cycle implementation: vendor evaluation, phased rollout, training infrastructure, governance frameworks, and adoption tracking. I designed and launched Life.Church's AI Resource & Learning Hub, achieving 85% staff engagement in the first quarter."
+                description: "I've deployed Claude Enterprise, Cursor, n8n, and custom AI solutions across 1,000+ employees. This includes full-cycle implementation: vendor evaluation, phased rollout, training infrastructure, governance frameworks, and adoption tracking. I designed and launched Life.Church's AI Resource & Learning Hub, achieving 85% staff engagement in the first quarter."
               },
               {
                 icon: <Code className="h-8 w-8" />,
@@ -146,7 +148,7 @@ const Portfolio = () => {
               {
                 icon: <Users className="h-8 w-8" />,
                 title: "AI Training & Change Management",
-                description: "I've trained 2,000+ individuals across every skill level—from people who've never touched AI to teams with deeply integrated workflows. My approach yields exponential productivity gains because I meet people where they are: one-on-ones for executives, workshops for teams, keynotes for organizations."
+                description: "I've trained 9,000+ staff members across every skill level—from people who've never touched AI to teams with deeply integrated workflows. My approach yields exponential productivity gains because I meet people where they are: one-on-ones for executives, workshops for teams, keynotes for organizations."
               },
               {
                 icon: <BarChart className="h-8 w-8" />,
@@ -179,14 +181,14 @@ const Portfolio = () => {
             {/* Project 1 */}
             <Card className="p-8 border-primary/20 bg-card/50">
               <h3 className="text-2xl font-bold mb-4 text-primary">
-                Enterprise AI Transformation at Life.Church
+                Enterprise AI Transformation at Life.Church & YouVersion
               </h3>
 
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">The Challenge:</h4>
                   <p className="text-muted-foreground">
-                    Deploy multiple AI platforms (Claude, Copilot, Cursor) across 1,000+ employees with varying technical skills and no existing AI infrastructure.
+                    Deploy multiple AI platforms (Claude Enterprise, Cursor, n8n) across 1,000+ employees with varying technical skills and no existing AI infrastructure.
                   </p>
                 </div>
 
@@ -194,9 +196,9 @@ const Portfolio = () => {
                   <h4 className="font-semibold text-foreground mb-2">What I Built:</h4>
                   <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                     <li>AI Resource & Learning Hub (centralized knowledge base and training platform)</li>
-                    <li>AI architectures optimized for safety, performance, and UX</li>
+                    <li>Hundreds of automation workflows using n8n (200+ hours saved monthly)</li>
                     <li>Custom AI agents and orchestrations for internal processes</li>
-                    <li>Training programs reaching 2,000+ individuals</li>
+                    <li>71+ training resources reaching 9,000+ staff members</li>
                   </ul>
                 </div>
 
@@ -204,9 +206,9 @@ const Portfolio = () => {
                   <h4 className="font-semibold text-foreground mb-2">Results:</h4>
                   <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                     <li>85% staff engagement in first quarter</li>
-                    <li>Full-stack AI agents deployed for internal workflows</li>
-                    <li>Training delivered across 1:1, workshop, and keynote formats</li>
-                    <li>Exponential productivity gains across teams</li>
+                    <li>9,000+ staff trained through AI Resource & Learning Hub</li>
+                    <li>200+ hours saved monthly through automation workflows</li>
+                    <li>71+ resources published in 6 months</li>
                   </ul>
                 </div>
               </div>
@@ -374,8 +376,8 @@ const Portfolio = () => {
             <Card className="p-8 border-primary/20 bg-card/50">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-primary">AI Solutions Manager</h3>
-                  <p className="text-xl text-foreground">Life.Church</p>
+                  <h3 className="text-2xl font-bold text-primary">AI Solutions Architect</h3>
+                  <p className="text-xl text-foreground">Life.Church & YouVersion</p>
                 </div>
                 <div className="text-muted-foreground mt-2 md:mt-0">
                   <p>September 2019 – Present</p>
@@ -384,15 +386,15 @@ const Portfolio = () => {
               </div>
 
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Lead enterprise-wide AI transformation across 1,000+ staff members. Implemented Claude, Cursor, Copilot, and custom AI tools. Designed and launched AI Resource & Learning Hub (85% engagement in Q1). Full-stack development of AI agents, orchestrations, and applications. Trained 2,000+ individuals through 1:1s, workshops, and keynotes.
+                Lead enterprise-wide AI transformation across 1,000+ staff members. Implemented Claude Enterprise, Cursor, n8n, and custom AI solutions. Developed and deployed hundreds of automation workflows saving 200+ hours monthly. Designed and launched AI Resource & Learning Hub achieving 85% staff engagement in Q1 and training 9,000+ staff. Created and delivered 71+ targeted AI training resources over 6 months.
               </p>
 
               <div>
                 <h4 className="font-semibold text-foreground mb-2">Key Achievements:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li>Developed AI architectures for safety, performance, and UX</li>
-                  <li>Built training programs serving complete beginners to advanced users</li>
-                  <li>Delivered exponential productivity gains across all team types</li>
+                  <li>Developed and deployed hundreds of automation workflows (200+ hours saved monthly)</li>
+                  <li>Designed AI Resource & Learning Hub (85% engagement, 9,000+ staff trained)</li>
+                  <li>Created 71+ training resources and delivered targeted AI training programs</li>
                 </ul>
               </div>
             </Card>
@@ -400,7 +402,7 @@ const Portfolio = () => {
             <Card className="p-8 border-primary/20 bg-card/50">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-primary">Founder/CEO/President</h3>
+                  <h3 className="text-2xl font-bold text-primary">Founder & CEO</h3>
                   <p className="text-xl text-foreground">Navis.Digital</p>
                 </div>
                 <div className="text-muted-foreground mt-2 md:mt-0">
@@ -410,7 +412,7 @@ const Portfolio = () => {
               </div>
 
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Led team of engineers, ML researchers, and automation specialists delivering AI implementations for businesses. Transformed AI potential into measurable business outcomes through implementation, prompt engineering, and adoption training.
+                Transformed AI potential into measurable business outcomes through implementation, prompt engineering, and adoption training. Developed deep technical expertise in LLMs (95% proficiency), prompt engineering (95%), AI agents (90%), and workflow process automation. Led team of engineers, ML researchers, and automation specialists delivering AI implementations for businesses.
               </p>
 
               <div>
@@ -463,14 +465,14 @@ const Portfolio = () => {
 
               <Card className="p-6 border-primary/20 bg-card/50">
                 <h4 className="text-xl font-bold mb-2">Harvard University</h4>
-                <p className="text-foreground font-semibold mb-1">Master's Degree, Computer Science</p>
-                <p className="text-muted-foreground text-sm mb-2">May 2019 – May 2021 | Remote</p>
+                <p className="text-foreground font-semibold mb-1">Computer Science & AI for Leaders</p>
+                <p className="text-muted-foreground text-sm mb-2">2025</p>
               </Card>
 
               <Card className="p-6 border-primary/20 bg-card/50">
                 <h4 className="text-xl font-bold mb-2">Oklahoma State University</h4>
-                <p className="text-foreground font-semibold mb-1">Bachelor's Degree, Business</p>
-                <p className="text-muted-foreground text-sm mb-2">August 2015 – May 2019 | Stillwater, OK</p>
+                <p className="text-foreground font-semibold mb-1">Double Major: Entrepreneurship & Marketing</p>
+                <p className="text-muted-foreground text-sm mb-2">2019 | Stillwater, OK</p>
               </Card>
             </div>
 
@@ -525,9 +527,9 @@ const Portfolio = () => {
                 <h3 className="text-xl font-bold">AI & Machine Learning</h3>
               </div>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><span className="text-foreground font-semibold">Platforms:</span> Claude, Microsoft Copilot, Cursor, ChatGPT/OpenAI API</p>
-                <p><span className="text-foreground font-semibold">Frameworks:</span> TensorFlow, PyTorch</p>
-                <p><span className="text-foreground font-semibold">Specializations:</span> LLMs, Generative AI, AI agents, prompt engineering, MLOps</p>
+                <p><span className="text-foreground font-semibold">Platforms:</span> Claude.ai, Cursor, VS Code, Notion</p>
+                <p><span className="text-foreground font-semibold">AI/ML:</span> LLMs, Machine Learning, AI Agents</p>
+                <p><span className="text-foreground font-semibold">Specializations:</span> Prompt engineering, AI implementation, workflow automation</p>
                 <p><span className="text-foreground font-semibold">Proficiency:</span> LLMs (95%), Prompt Engineering (95%), AI Agents (90%)</p>
               </div>
             </Card>
@@ -538,7 +540,7 @@ const Portfolio = () => {
                 <h3 className="text-xl font-bold">Development</h3>
               </div>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><span className="text-foreground font-semibold">Languages:</span> Python, JavaScript</p>
+                <p><span className="text-foreground font-semibold">Languages:</span> Python, JavaScript, Node.js, TypeScript</p>
                 <p><span className="text-foreground font-semibold">Skills:</span> Full-stack development, software development, AI application architecture</p>
               </div>
             </Card>
@@ -550,7 +552,7 @@ const Portfolio = () => {
               </div>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p><span className="text-foreground font-semibold">Platforms:</span> n8n, workflow process automation</p>
-                <p><span className="text-foreground font-semibold">Capabilities:</span> AI orchestrations, API integrations, production workflow systems</p>
+                <p><span className="text-foreground font-semibold">Capabilities:</span> Workflow Design, Optimization, AI orchestrations</p>
               </div>
             </Card>
 
@@ -582,7 +584,7 @@ const Portfolio = () => {
                 <h3 className="text-xl font-bold">Leadership & Management</h3>
               </div>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><span className="text-foreground font-semibold">Skills:</span> Stakeholder management, cross-functional team management, change management, Agile</p>
+                <p><span className="text-foreground font-semibold">Skills:</span> Training Development, Change Management, Technical Writing, Presentations</p>
               </div>
             </Card>
           </div>
@@ -608,7 +610,7 @@ const Portfolio = () => {
               <li><span className="font-semibold text-foreground">Strategy consultants</span> who can pitch AI but can't implement it</li>
             </ul>
             <p className="text-lg text-foreground font-semibold">
-              I do both. I have a Harvard CS Master's and build production AI systems. I've also trained 2,000+ people and achieved 85% adoption rates. That combination is rare.
+              I do both. I completed Harvard's Computer Science & AI for Leaders program and build production AI systems. I've also trained 9,000+ people and achieved 85% adoption rates. That combination is rare.
             </p>
           </Card>
 
@@ -616,9 +618,9 @@ const Portfolio = () => {
             <h3 className="text-2xl font-bold mb-6 text-primary">Proof Points</h3>
             <div className="space-y-4">
               {[
-                { claim: "Technical depth", evidence: "Harvard CS, TensorFlow/PyTorch, full-stack AI development" },
+                { claim: "Technical depth", evidence: "Harvard CS & AI for Leaders, Python/JavaScript/TypeScript, full-stack AI development" },
                 { claim: "Implementation experience", evidence: "1,000+ employees, multiple platforms, custom AI agents" },
-                { claim: "Training capability", evidence: "2,000+ individuals, 85% adoption, keynote to 1:1 formats" },
+                { claim: "Training capability", evidence: "9,000+ staff trained, 85% adoption, 71+ resources published" },
                 { claim: "Entrepreneurship", evidence: "Founded 2 AI companies, led engineering teams" },
                 { claim: "Audience understanding", evidence: "11.3M followers, major media features" }
               ].map((item, index) => (
