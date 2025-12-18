@@ -36,7 +36,7 @@ const Portfolio = () => {
           {/* Headshot - circular image above badge */}
           <div className="flex justify-center mb-4">
             <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
-              <img src={headshot} alt="Nick Prince" className="w-full h-full object-cover object-[center_25%]" />
+              <img src={headshot} alt="Nick Prince" className="w-full h-full object-cover object-center" />
             </div>
           </div>
           
@@ -133,7 +133,6 @@ const Portfolio = () => {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground/70 mt-2 text-center">Speaking at a tech summit</p>
             </div>
           </div>
         </div>
