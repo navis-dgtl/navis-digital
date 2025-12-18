@@ -3,7 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import PortfolioNav from "@/components/PortfolioNav";
-import emojiAvatar from "@/assets/emoji-avatar.png";
+import headshot from "@/assets/headshot.jpeg";
+import speakingPhoto from "@/assets/speaking-photo.jpeg";
 import {
   Mail,
   Phone,
@@ -32,10 +33,10 @@ const Portfolio = () => {
         <div className="absolute inset-0 bg-gradient-hero" />
 
         <div className="container relative z-10 max-w-4xl mx-auto text-center animate-fade-in-up">
-          {/* Emoji Avatar - small circular image above badge */}
+          {/* Headshot - circular image above badge */}
           <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30">
-              <img src={emojiAvatar} alt="Nick Prince" className="w-full h-full object-cover" />
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
+              <img src={headshot} alt="Nick Prince" className="w-full h-full object-cover object-[center_25%]" />
             </div>
           </div>
           
@@ -105,21 +106,35 @@ const Portfolio = () => {
 
       {/* Introduction Section */}
       <section id="about" className="py-20 px-6">
-        <div className="container max-w-4xl mx-auto">
+        <div className="container max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
 
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              I lead enterprise AI transformation at <span className="text-foreground font-semibold">Life.Church & YouVersion</span> as AI Solutions Architect, where I've implemented Claude Enterprise, Cursor, n8n, and custom AI solutions across 1,000+ staff members. In my first quarter, I achieved 85% adoption through the AI Resource & Learning Hub I designed and launched. I've personally trained over 9,000 staff members—from complete AI beginners to teams with deeply integrated workflows—and created 71+ training resources in just 6 months.
-            </p>
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed flex-1">
+              <p>
+                I lead enterprise AI transformation at <span className="text-foreground font-semibold">Life.Church & YouVersion</span> as AI Solutions Architect, where I've implemented Claude Enterprise, Cursor, n8n, and custom AI solutions across 1,000+ staff members. In my first quarter, I achieved 85% adoption through the AI Resource & Learning Hub I designed and launched. I've personally trained over 9,000 staff members—from complete AI beginners to teams with deeply integrated workflows—and created 71+ training resources in just 6 months.
+              </p>
 
-            <p>
-              Before this role, I founded <span className="text-foreground font-semibold">Navis.Digital</span>, an AI consultancy where I led engineers, ML researchers, and automation specialists in delivering AI implementations for businesses. I also built <span className="text-foreground font-semibold">Forgeflow AI</span>, a low/no-code platform that enabled thousands to build and deploy AI applications.
-            </p>
+              <p>
+                Before this role, I founded <span className="text-foreground font-semibold">Navis.Digital</span>, an AI consultancy where I led engineers, ML researchers, and automation specialists in delivering AI implementations for businesses. I also built <span className="text-foreground font-semibold">Forgeflow AI</span>, a low/no-code platform that enabled thousands to build and deploy AI applications.
+              </p>
 
-            <p>
-              My background combines technical depth (<span className="text-primary font-semibold">Harvard Computer Science & AI for Leaders program</span>, full-stack development, Python/JavaScript/Node.js/TypeScript) with proven ability to drive adoption at scale. I've also built social media properties reaching 11.3 million followers, with features in Huffington Post, BuzzFeed, ABC News, and The Ellen Show—demonstrating I understand how to make technology accessible and engaging.
-            </p>
+              <p>
+                My background combines technical depth (<span className="text-primary font-semibold">Harvard Computer Science & AI for Leaders program</span>, full-stack development, Python/JavaScript/Node.js/TypeScript) with proven ability to drive adoption at scale. I've also built social media properties reaching 11.3 million followers, with features in Huffington Post, BuzzFeed, ABC News, and The Ellen Show—demonstrating I understand how to make technology accessible and engaging.
+              </p>
+            </div>
+
+            {/* Speaking Photo */}
+            <div className="lg:w-80 w-full flex-shrink-0">
+              <div className="rounded-lg overflow-hidden border border-primary/20">
+                <img 
+                  src={speakingPhoto} 
+                  alt="Nick Prince speaking at a tech summit" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground/70 mt-2 text-center">Speaking at a tech summit</p>
+            </div>
           </div>
         </div>
       </section>
